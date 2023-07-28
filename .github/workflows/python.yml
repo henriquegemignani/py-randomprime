@@ -46,6 +46,7 @@ jobs:
           CIBW_BUILD: 'cp38-*'
           CIBW_SKIP: '*-win32 *-manylinux_i686'
           CIBW_ARCHS_MACOS: 'x86_64 arm64'
+          PYO3_CROSS_LIB_DIR: /Applications/Xcode.app/Contents/Developer/Library/Frameworks/Python3.framework/Versions/3.8/lib
 
       - name: Check if there are changes
         run: git diff --exit-code
